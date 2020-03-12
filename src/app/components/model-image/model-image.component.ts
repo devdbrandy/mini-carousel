@@ -12,10 +12,17 @@ export class ModelImageComponent implements OnInit {
   constructor(private slideService: SlidesService) {}
 
   ngOnInit() {
+    this.loadSlideImage();
+    this.eagerLoadImages();
+  }
+
+  loadSlideImage(): void {
     this.slideService.sharedSlide.subscribe(
       slide => (this.image = slide.image)
     );
+  }
 
+  eagerLoadImages(): void {
     this.slideService.getSlides().subscribe(slides => {
       slides.forEach(slide => {
         new Image().src = slide.image;

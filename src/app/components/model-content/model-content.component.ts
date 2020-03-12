@@ -16,9 +16,11 @@ export class ModelContentComponent implements OnInit {
   constructor(private slideService: SlidesService) {}
 
   ngOnInit() {
-    this.slideService
-      .getSlides()
-      .subscribe(slideData => (this.slides = slideData));
+    this.loadSlides();
+  }
+
+  loadSlides(): void {
+    this.slideService.getSlides().subscribe(slides => (this.slides = slides));
   }
 
   showSlide(index) {
@@ -26,7 +28,7 @@ export class ModelContentComponent implements OnInit {
     this.slideService.nextSlide(this.activeSlide);
   }
 
-  isActiveSlide(slide) {
+  isActiveSlide(slide): boolean {
     return slide === this.slides[this.currentIndex];
   }
 

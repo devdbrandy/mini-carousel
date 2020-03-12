@@ -14,6 +14,10 @@ export class AppComponent implements OnInit {
   constructor(private slideService: SlidesService) {}
 
   ngOnInit() {
+    this.loadActiveSlide();
+  }
+
+  loadActiveSlide(): void {
     this.slideService.sharedSlide.subscribe(slide => (this.slide = slide));
   }
 }
