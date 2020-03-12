@@ -27,11 +27,11 @@
             [class.active]="isActiveSlide(slide)"
             (click)="showSlide(index)"
           >
-            <div class="slide-count" [hidden]="!isActiveSlide(slide)">
+            <div class="slide-count">
               {{ slide.alt }}
             </div>
             <div class="divider"></div>
-            <div class="slide-label" [hidden]="!isActiveSlide(slide)">
+            <div class="slide-label">
               Next Picture
             </div>
           </div>
