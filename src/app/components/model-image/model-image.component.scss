@@ -1,0 +1,25 @@
+@import '../../../assets/styles/config';
+
+.model-image {
+  position: relative;
+
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 36px 63px;
+    background-color: white;
+    font-family: $header-font;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+  }
+
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
+}

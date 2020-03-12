@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0e1d33;
+
+  .model {
+    width: 95%;
+    max-height: 720px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0 30px 40px 0 rgba(0, 0, 0, .16);
+  }
+}
