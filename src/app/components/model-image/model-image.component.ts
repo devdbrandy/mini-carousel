@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SlidesServiceService } from '../../shared/service/slides-service.service';
 
 @Component({
   selector: 'app-model-image',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./model-image.component.scss']
 })
 export class ModelImageComponent implements OnInit {
+  image: string;
 
-  constructor() { }
+  constructor(private slideService: SlidesServiceService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.slideService.sharedSlide.subscribe(
+      slide => (this.image = slide.image)
+    );
   }
-
 }

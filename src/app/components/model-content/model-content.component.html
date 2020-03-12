@@ -13,20 +13,29 @@
     </nav>
 
     <section class="model-section">
-      <h2>Balinda <span>Christelle</span></h2>
-      <h3>Model</h3>
+      <h2>{{ title }}</h2>
+      <h3>{{ role }}</h3>
     </section>
 
     <section class="slide-control-section">
       <nav class="vertical-menu">Intagram</nav>
 
       <div class="slide-control">
-        <div class="wrapper">
-          <div class="slide-count">I/IV</div>
-          <div class="slide-label">
-            Next Picture
+        <ng-container *ngFor="let slide of slides; index as index">
+          <div
+            class="wrapper"
+            [class.active]="isActiveSlide(slide)"
+            (click)="showSlide(index)"
+          >
+            <div class="slide-count" [hidden]="!isActiveSlide(slide)">
+              {{ slide.alt }}
+            </div>
+            <div class="divider"></div>
+            <div class="slide-label" [hidden]="!isActiveSlide(slide)">
+              Next Picture
+            </div>
           </div>
-        </div>
+        </ng-container>
       </div>
     </section>
   </section>

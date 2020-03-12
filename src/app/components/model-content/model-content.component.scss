@@ -8,12 +8,10 @@
   border-radius: 5px 0 0 0;
 
   header {
+    @include text-style(10px, 1.3, #141414, uppercase);
+
     padding: 20px;
     font-family: $header-font;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 1.3;
-    text-transform: uppercase;
   }
 
   .nav-menu {
@@ -24,12 +22,11 @@
       position: relative;
 
       li {
+        @include text-style(12px, 1.17, #484646);
+
         list-style: none;
         display: inline;
-        font-size: 12px;
-        line-height: 1.17;
         text-align: center;
-        color: #484646;
         cursor: pointer;
 
         &+li {
@@ -54,16 +51,11 @@
     padding: 0 18%;
 
     h2 {
-      font-size: 61px;
-      font-weight: 400;
-      line-height: 1.31;
-      color: #141414;
+      @include text-style(61px, 1.31, #141414);
     }
 
     h3 {
-      font-size: 15px;
-      font-weight: 400;
-      color: #4e4e4e;
+      @include text-style(15px, 1, #4e4e4e);
       text-align: right;
     }
   }
@@ -80,14 +72,22 @@
       margin-right: 18%;
       font-size: 27px;
       color: #141414;
-      border-bottom: 1px solid #0e1d0e;
 
       .wrapper {
         position: relative;
         width: 25%;
         text-align: center;
         padding: 7px;
-        border-bottom: 2px solid #1a191a;
+        cursor: pointer;
+
+        .divider {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #1a191a;
+        }
 
         .slide-label {
           position: absolute;
@@ -98,6 +98,10 @@
           font-style: italic;
           text-align: center;
           color: #484646;
+        }
+
+        &.active .divider {
+          height: 4px;
         }
       }
     }

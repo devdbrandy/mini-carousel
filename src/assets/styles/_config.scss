@@ -1,3 +1,12 @@
 /* variables */
 $header-font: 'Montserrat';
 $font-family: 'Georgia';
+
+/* mixins */
+@mixin text-style($size, $height, $color, $transform: capitalize) {
+  font-size: $size;
+  font-weight: 400;
+  line-height: $height;
+  color: $color;
+  text-transform: $transform;
+}

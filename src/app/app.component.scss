@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0e1d33;
+  transition: background .5s ease-out;
 
   .model {
     width: 95%;
