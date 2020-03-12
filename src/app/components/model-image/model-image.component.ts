@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SlidesServiceService } from '../../shared/service/slides-service.service';
+// import { pipe } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-model-image',
@@ -15,5 +17,11 @@ export class ModelImageComponent implements OnInit {
     this.slideService.sharedSlide.subscribe(
       slide => (this.image = slide.image)
     );
+
+    this.slideService.getSlides().subscribe(slides => {
+      slides.forEach(slide => {
+        new Image().src = slide.image;
+      });
+    });
   }
 }

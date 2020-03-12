@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Slide } from 'src/app/shared/interface/slide';
 import { SlidesServiceService } from '../../shared/service/slides-service.service';
-import { slides } from '../../shared/slide.data';
 
 @Component({
   selector: 'app-model-content',
@@ -17,7 +16,9 @@ export class ModelContentComponent implements OnInit {
   constructor(private slideService: SlidesServiceService) {}
 
   ngOnInit() {
-    this.slides = [...slides];
+    this.slideService
+      .getSlides()
+      .subscribe(slideData => (this.slides = slideData));
   }
 
   showSlide(index) {

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, of, Observable } from 'rxjs';
 import { slides } from '../slide.data';
 import { Slide } from '../interface/slide';
 
@@ -11,6 +11,10 @@ export class SlidesServiceService {
   sharedSlide = this.slide.asObservable();
 
   constructor() {}
+
+  getSlides(): Observable<Slide[]> {
+    return of(slides);
+  }
 
   nextSlide(slide) {
     this.slide.next(slide);
