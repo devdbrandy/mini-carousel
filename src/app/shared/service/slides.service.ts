@@ -6,7 +6,7 @@ import { Slide } from '../interface/slide';
 @Injectable({
   providedIn: 'root'
 })
-export class SlidesServiceService {
+export class SlidesService {
   private slide = new BehaviorSubject<Slide>(slides[0]);
   sharedSlide = this.slide.asObservable();
 

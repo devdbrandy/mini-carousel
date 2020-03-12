@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Slide } from './shared/interface/slide';
-import { SlidesServiceService } from './shared/service/slides-service.service';
+import { SlidesService } from './shared/service/slides.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'Mini Carousel';
   slide: Slide;
 
-  constructor(private slideService: SlidesServiceService) {}
+  constructor(private slideService: SlidesService) {}
 
   ngOnInit() {
     this.slideService.sharedSlide.subscribe(slide => (this.slide = slide));
