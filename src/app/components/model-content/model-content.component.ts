@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Slide } from 'src/app/shared/interface/slide';
-import { SlidesService } from '../../shared/service/slides.service';
+import { SlidesService } from '../../shared/services/slides.service';
 
 @Component({
   selector: 'app-model-content',

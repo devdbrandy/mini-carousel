@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SlidesService } from '../../shared/service/slides.service';
+import { SlidesService } from '../../shared/services/slides.service';
 
 @Component({
   selector: 'app-model-image',
