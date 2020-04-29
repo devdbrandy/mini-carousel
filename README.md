@@ -6,11 +6,11 @@ A simple minimalistic carousel design using angular.
 
 ### Mockup
 
-![Mockup Design](screenshots/mockup.png)
+![Mockup Design](screenshots/mockup.jpg)
 
 ### Design Implementation
 
-![Design Implementation](screenshots/design.png)
+![Design Implementation](screenshots/design.jpg)
 
 ## Development server
 
