@@ -26,6 +26,8 @@
             class="wrapper"
             [class.active]="isActiveSlide(slide)"
             (click)="showSlide(index)"
+            (mouseenter)="pause()"
+            (mouseleave)="resume()"
           >
             <div class="slide-count">
               {{ slide.alt }}
