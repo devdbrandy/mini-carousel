@@ -1,4 +1,8 @@
 <section class="model-image">
-  <nav class="menu">Menu</nav>
-  <img src="{{ image }}" alt="slide-01" />
+  <app-loader *ngIf="loadingImage"></app-loader>
+
+  <ng-container *ngIf="!loadingImage">
+    <nav class="menu">Menu</nav>
+    <img src="{{ image }}" alt="slide-01" />
+  </ng-container>
 </section>

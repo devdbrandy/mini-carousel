@@ -140,3 +140,46 @@
     line-height: 2;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .model-content {
+    grid-template-rows: auto 2.5fr 1fr;
+
+    .nav-menu {
+      margin-top: 0;
+      padding: 20px 13%;
+    }
+
+    .slide-control-section {
+      margin-top: 60px;
+
+      .vertical-menu {
+        font-size: 11px;
+      }
+
+      .slide-control .wrapper.active .slide-count {
+        font-size: 1.2rem;
+      }
+
+      .slide-control .wrapper.active .slide-label {
+        font-size: 9px;
+      }
+    }
+
+    .model-section {
+      padding: 0 13%;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 11px;
+      }
+    }
+
+    footer {
+      font-size: 13px;
+    }
+  }
+}

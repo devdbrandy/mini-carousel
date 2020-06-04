@@ -2,6 +2,8 @@
 
 .model-image {
   position: relative;
+  width: 100%;
+  height: 100%;
 
   .menu {
     position: absolute;
@@ -19,7 +21,15 @@
   }
 
   img {
+    width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .model-image .menu {
+    font-size: 12px;
+    padding: 20px;
   }
 }

@@ -10,7 +10,33 @@
     max-width: 1400px;
     max-height: 720px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'content slide';
     box-shadow: 0 30px 40px 0 rgba(0, 0, 0, .16);
+
+    .content {
+      grid-area: content;
+    }
+
+    .slide {
+      grid-area: slide;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 2rem 1rem;
+    height: auto;
+
+    .model {
+      max-width: none;
+      max-height: none;
+
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'slide'
+        'content';
+    }
   }
 }
