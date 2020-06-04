@@ -10,7 +10,8 @@ A simple minimalistic carousel design using angular.
 
 ### Design Implementation
 
-![Design Implementation](screenshots/design.jpg)
+![Large Screen](screenshots/design.jpg)
+<img src="screenshots/mobile.png" alt="Mobile Design" width="320"/>
 
 ## Development server
 
